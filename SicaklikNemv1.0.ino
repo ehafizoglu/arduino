@@ -7,8 +7,6 @@ String statikIP = "192.168.1.35";
 String gateway =  "192.168.1.1";
 String netmask =  "255.255.255.0";
 
-
-
 String ip = "184.106.153.149"; //Thingspeak ip adresi
 float sicaklik, nem;
 
@@ -18,8 +16,6 @@ dht11 DHT11;
 
 void setup()
 {
-
-
   Serial.begin(115200);
   Serial.println("Bağlantı süreci başlatıldı.");
 
@@ -129,20 +125,12 @@ void loop() {
       delay(30000);
     }
 
-
     else Serial.println("Veri Gönderilemedi");
 
-
   }
-
-
   else
 
     Serial.println("Thingspeak'e bağlanamadık. Tekrar Dene...");
-
-
-
-
   Serial.println("Baglantı kapatılmaya çalışılacak.");
   Serial.println("AT+CIPCLOSE");                                //Bağlantıyı kapatıyoruz
   delay(30000);                                               //Yeni veri gönderimi için 1 dakika bekliyoruz.
@@ -152,9 +140,5 @@ void loop() {
       Serial.println("Bağlantı kapatılamadı...");
       delay(30000);
     }
-
-
-
-else       Serial.println("Bağlantı kapatıldı...");
-    
-}
+     else       Serial.println("Bağlantı kapatıldı...");
+    }
